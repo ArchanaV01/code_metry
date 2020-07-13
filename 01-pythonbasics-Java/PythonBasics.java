@@ -12,6 +12,10 @@ public class PythonBasics {
 
 	public String show_excitement() {
 		// your code goes here
-		return "I am excited to do this course!!";
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < 5; i++) {
+			sb.append("I am super excited for this course! ");
+		}
+		return sb.toString();
 	}
 }
