@@ -1,0 +1,26 @@
+/**
+ * This is JUnit that tests the sleepIn method that is available in SleepIn class.
+ * This contains 4 testcases.
+ * 
+ * Please dont run this file.
+ * You can add your own test cases to this file by just copy and paste the last three 
+ * lines of the code (TestCase4).
+ * 
+ * @author: Siva Sankar
+ */
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestJUnit {
+   @Test
+   public void testCase1() {
+		assertEquals(new GetAllPermutations().getAllPermutations("abc"), "[(a, b, c), (a, c, b), (b, a, c), (b, c, a), (c, a, b), (c, b, a)]");
+		assertEquals(new GetAllPermutations().getAllPermutations("abcd"), "[(a, b, c, d), (a, b, d, c), (a, c, b, d), (a, c, d, b), (a, d, b, c), (a, d, c, b), (b, a, c, d), (b, a, d, c), (b, c, a, d), (b, c, d, a), (b, d, a, c), (b, d, c, a), (c, a, b, d), (c, a, d, b), (c, b, a, d), (c, b, d, a), (c, d, a, b), (c, d, b, a), (d, a, b, c), (d, a, c, b), (d, b, a, c), (d, b, c, a), (d, c, a, b), (d, c, b, a)]");
+		assertEquals(new GetAllPermutations().getAllPermutations("ab"), "[(a, b), (b, a)]");
+		assertEquals(new GetAllPermutations().getAllPermutations("abcde"), "[(a, b, c, d, e), (a, b, c, e, d), (a, b, d, c, e), (a, b, d, e, c), (a, b, e, c, d), (a, b, e, d, c), (a, c, b, d, e), (a, c, b, e, d), (a, c, d, b, e), (a, c, d, e, b), (a, c, e, b, d), (a, c, e, d, b), (a, d, b, c, e), (a, d, b, e, c), (a, d, c, b, e), (a, d, c, e, b), (a, d, e, b, c), (a, d, e, c, b), (a, e, b, c, d), (a, e, b, d, c), (a, e, c, b, d), (a, e, c, d, b), (a, e, d, b, c), (a, e, d, c, b), (b, a, c, d, e), (b, a, c, e, d), (b, a, d, c, e), (b, a, d, e, c), (b, a, e, c, d), (b, a, e, d, c), (b, c, a, d, e), (b, c, a, e, d), (b, c, d, a, e), (b, c, d, e, a), (b, c, e, a, d), (b, c, e, d, a), (b, d, a, c, e), (b, d, a, e, c), (b, d, c, a, e), (b, d, c, e, a), (b, d, e, a, c), (b, d, e, c, a), (b, e, a, c, d), (b, e, a, d, c), (b, e, c, a, d), (b, e, c, d, a), (b, e, d, a, c), (b, e, d, c, a), (c, a, b, d, e), (c, a, b, e, d), (c, a, d, b, e), (c, a, d, e, b), (c, a, e, b, d), (c, a, e, d, b), (c, b, a, d, e), (c, b, a, e, d), (c, b, d, a, e), (c, b, d, e, a), (c, b, e, a, d), (c, b, e, d, a), (c, d, a, b, e), (c, d, a, e, b), (c, d, b, a, e), (c, d, b, e, a), (c, d, e, a, b), (c, d, e, b, a), (c, e, a, b, d), (c, e, a, d, b), (c, e, b, a, d), (c, e, b, d, a), (c, e, d, a, b), (c, e, d, b, a), (d, a, b, c, e), (d, a, b, e, c), (d, a, c, b, e), (d, a, c, e, b), (d, a, e, b, c), (d, a, e, c, b), (d, b, a, c, e), (d, b, a, e, c), (d, b, c, a, e), (d, b, c, e, a), (d, b, e, a, c), (d, b, e, c, a), (d, c, a, b, e), (d, c, a, e, b), (d, c, b, a, e), (d, c, b, e, a), (d, c, e, a, b), (d, c, e, b, a), (d, e, a, b, c), (d, e, a, c, b), (d, e, b, a, c), (d, e, b, c, a), (d, e, c, a, b), (d, e, c, b, a), (e, a, b, c, d), (e, a, b, d, c), (e, a, c, b, d), (e, a, c, d, b), (e, a, d, b, c), (e, a, d, c, b), (e, b, a, c, d), (e, b, a, d, c), (e, b, c, a, d), (e, b, c, d, a), (e, b, d, a, c), (e, b, d, c, a), (e, c, a, b, d), (e, c, a, d, b), (e, c, b, a, d), (e, c, b, d, a), (e, c, d, a, b), (e, c, d, b, a), (e, d, a, b, c), (e, d, a, c, b), (e, d, b, a, c), (e, d, b, c, a), (e, d, c, a, b), (e, d, c, b, a)]");
+		assertEquals(new GetAllPermutations().getAllPermutations("xyzab"), "[(x, y, z, a, b), (x, y, z, b, a), (x, y, a, z, b), (x, y, a, b, z), (x, y, b, z, a), (x, y, b, a, z), (x, z, y, a, b), (x, z, y, b, a), (x, z, a, y, b), (x, z, a, b, y), (x, z, b, y, a), (x, z, b, a, y), (x, a, y, z, b), (x, a, y, b, z), (x, a, z, y, b), (x, a, z, b, y), (x, a, b, y, z), (x, a, b, z, y), (x, b, y, z, a), (x, b, y, a, z), (x, b, z, y, a), (x, b, z, a, y), (x, b, a, y, z), (x, b, a, z, y), (y, x, z, a, b), (y, x, z, b, a), (y, x, a, z, b), (y, x, a, b, z), (y, x, b, z, a), (y, x, b, a, z), (y, z, x, a, b), (y, z, x, b, a), (y, z, a, x, b), (y, z, a, b, x), (y, z, b, x, a), (y, z, b, a, x), (y, a, x, z, b), (y, a, x, b, z), (y, a, z, x, b), (y, a, z, b, x), (y, a, b, x, z), (y, a, b, z, x), (y, b, x, z, a), (y, b, x, a, z), (y, b, z, x, a), (y, b, z, a, x), (y, b, a, x, z), (y, b, a, z, x), (z, x, y, a, b), (z, x, y, b, a), (z, x, a, y, b), (z, x, a, b, y), (z, x, b, y, a), (z, x, b, a, y), (z, y, x, a, b), (z, y, x, b, a), (z, y, a, x, b), (z, y, a, b, x), (z, y, b, x, a), (z, y, b, a, x), (z, a, x, y, b), (z, a, x, b, y), (z, a, y, x, b), (z, a, y, b, x), (z, a, b, x, y), (z, a, b, y, x), (z, b, x, y, a), (z, b, x, a, y), (z, b, y, x, a), (z, b, y, a, x), (z, b, a, x, y), (z, b, a, y, x), (a, x, y, z, b), (a, x, y, b, z), (a, x, z, y, b), (a, x, z, b, y), (a, x, b, y, z), (a, x, b, z, y), (a, y, x, z, b), (a, y, x, b, z), (a, y, z, x, b), (a, y, z, b, x), (a, y, b, x, z), (a, y, b, z, x), (a, z, x, y, b), (a, z, x, b, y), (a, z, y, x, b), (a, z, y, b, x), (a, z, b, x, y), (a, z, b, y, x), (a, b, x, y, z), (a, b, x, z, y), (a, b, y, x, z), (a, b, y, z, x), (a, b, z, x, y), (a, b, z, y, x), (b, x, y, z, a), (b, x, y, a, z), (b, x, z, y, a), (b, x, z, a, y), (b, x, a, y, z), (b, x, a, z, y), (b, y, x, z, a), (b, y, x, a, z), (b, y, z, x, a), (b, y, z, a, x), (b, y, a, x, z), (b, y, a, z, x), (b, z, x, y, a), (b, z, x, a, y), (b, z, y, x, a), (b, z, y, a, x), (b, z, a, x, y), (b, z, a, y, x), (b, a, x, y, z), (b, a, x, z, y), (b, a, y, x, z), (b, a, y, z, x), (b, a, z, x, y), (b, a, z, y, x)]");
+   }
+
+}
+
