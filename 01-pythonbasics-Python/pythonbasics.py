@@ -8,4 +8,4 @@
 
 def show_excitement():
     # Your code goes here!
-    return 'I am excited to work in this course!!'
+    return 'I am super excited for this course! ' * 5
