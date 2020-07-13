@@ -5,9 +5,13 @@
 // You can only have the string once in your code.
 // Don't just copy/paste it 5 times into a single variable!
 
-
 public class PythonBasics {
-    public String show_excitement() {
-    	// your code goes here
+	public static void main(String[] args) {
+
+	}
+
+	public String show_excitement() {
+		// your code goes here
+		return "I am excited to do this course!!";
 	}
 }
