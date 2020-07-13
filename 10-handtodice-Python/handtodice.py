@@ -8,5 +8,8 @@
 
 def handtodice(hand):
     # your code goes here
-    handstr = str(hand)
-    return tuple(handstr.split())
+    n_list = []
+    while hand > 0:
+        n_list.append(hand % 10)
+        hand = hand//10
+    return tuple(n_list[::-1])
