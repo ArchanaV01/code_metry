@@ -11,6 +11,10 @@
 # Hint: You can use max(a,b,c) to find the largest of 3 values, and
 # min(a,b,c) to find the smallest.
 
+
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	pass
+    # your code goes here
+    numb = 0
+    for each in sorted([a, b, c])[::-1]:
+        numb = numb*10 + each
+    return numb
