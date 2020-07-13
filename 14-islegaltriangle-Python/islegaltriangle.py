@@ -10,5 +10,5 @@ def islegaltriangle(s1, s2, s3):
     # your code goes here
     if s1 <= 0 or s2 <= 0 or s3 <= 0:
         return False
-    sides = sorted[s1, s2, s3]
+    sides = sorted([s1, s2, s3])
     return sides[0] + sides[1] > sides[2]
