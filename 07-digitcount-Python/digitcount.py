@@ -13,5 +13,5 @@ def digitcount(n):
     digcount = 0
     while (n > 0):
         digcount += 1
-        n /= 10
+        n //= 10
     return digcount
