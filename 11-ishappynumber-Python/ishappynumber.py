@@ -17,8 +17,8 @@ numbs = []
 
 
 def ishappynumber(n):
+    global numbs
     if n < 1:
-        numbs = []
         return False
     elif n == 1:
         numbs = []
