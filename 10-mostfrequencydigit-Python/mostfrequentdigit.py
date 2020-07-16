@@ -5,6 +5,8 @@
 
 def mostfrequentdigit(n):
     # your code goes here
+    if n == 0:
+        return 0
     digitCount = {}
     while n > 0:
         digit = n % 10
