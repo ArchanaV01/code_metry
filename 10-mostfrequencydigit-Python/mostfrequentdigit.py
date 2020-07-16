@@ -12,6 +12,7 @@ def mostfrequentdigit(n):
             digitCount[digit] = digitCount[digit] + 1
         else:
             digitCount[digit] = 1
+        n //= 10
     maxCount = 0
     maxDigit = []
     for each in digitCount:
@@ -20,4 +21,4 @@ def mostfrequentdigit(n):
             maxCount = digitCount[each]
         elif digitCount[each] == maxCount:
             maxDigit.append(each)
-    return max(maxDigit)
+    return min(maxDigit)
