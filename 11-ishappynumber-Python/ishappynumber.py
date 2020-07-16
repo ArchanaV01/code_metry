@@ -18,8 +18,10 @@ numbs = []
 
 def ishappynumber(n):
     if n < 1:
+        numbs = []
         return False
     elif n == 1:
+        numbs = []
         return True
     else:
         sumDigits = 0
@@ -27,7 +29,8 @@ def ishappynumber(n):
             sumDigits += (n % 10)**2
             n //= 10
         if sumDigits in numbs:
+            numbs = []
             return False
         else:
-            sumDigits.append(sumDigits)
+            numbs.append(sumDigits)
             return ishappynumber(sumDigits)
