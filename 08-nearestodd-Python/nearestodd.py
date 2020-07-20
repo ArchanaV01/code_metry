@@ -7,13 +7,11 @@
 def fun_nearestodd(n):
     intN = int(n)
     intNp1 = int(n+1)
-    if n - intN == 0 and n % 2 == 0:
-        return intN
-    elif n - intN == 0:
-        return intN - 1
-    elif n - intN > intNp1 - n and intNp1 % 2 == 0:
-        return intNp1
-    elif n - intN > intNp1 - n:
-        return intN
+    if intN % 2 == 0:
+        intNm1 = int(n-1)
+        if n - intN == 0 or n - intNm1 <= intNp1 - n:
+            return intN-1
+        else:
+            return intNp1
     else:
         return intN
