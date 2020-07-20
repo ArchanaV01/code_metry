@@ -1,8 +1,16 @@
 # median(a) (10 pts)
-# Write the non-destructive function median(a) that takes a list of ints or floats and returns the median value, 
-# which is the value of the middle element, or the average of the two middle elements if there is no single middle 
+# Write the non-destructive function median(a) that takes a list of ints or floats and returns the median value,
+# which is the value of the middle element, or the average of the two middle elements if there is no single middle
 # element. If the list is empty, return None.
 
+
 def median(a):
-	# your code goes here
-	pass
+    # your code goes here
+    length = len(a)
+    if length == 0:
+        return None
+        a.sort()
+        if length % 2 == 0:
+            return (a[length//2] + a[(length//2)-1])/2
+    else:
+        return a[length//2]
