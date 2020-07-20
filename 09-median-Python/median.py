@@ -9,8 +9,9 @@ def median(a):
     length = len(a)
     if length == 0:
         return None
+    elif length % 2 == 0:
         a.sort()
-        if length % 2 == 0:
-            return (a[length//2] + a[(length//2)-1])/2
+        return (a[length//2] + a[(length//2)-1])/2
     else:
+        a.sort()
         return a[length//2]
