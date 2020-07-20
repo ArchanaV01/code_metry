@@ -24,12 +24,12 @@ def fun_applycaesarcipher(msg, shift):
                 new_str += chr(newVal + 90 - 64)
         elif (asc >= 97 and asc <= 120):
             newVal = asc + shift
-            if (newVal >= 97 and newVal <= 120):
+            if (newVal >= 97 and newVal <= 122):
                 new_str += chr(newVal)
             elif newVal >= 97:
-                new_str += chr(newVal - 120 + 96)
+                new_str += chr(newVal - 122 + 96)
             else:
-                new_str += chr(newVal + 120 - 96)
+                new_str += chr(newVal + 122 - 96)
         else:
             new_str += each
     return new_str
