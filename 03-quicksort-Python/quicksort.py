@@ -19,8 +19,8 @@ def partition(arr, low, high):
 def quickSortHelper(array, lo, hi):
     if lo < hi:
         pi = partition(array, lo, hi)
-    quickSort(array, lo, pi-1)
-    quickSort(array, pi+1, hi)
+        quickSortHelper(array, lo, pi-1)
+        quickSortHelper(array, pi+1, hi)
 
 
 def quicksort(array):
