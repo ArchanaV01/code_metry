@@ -4,6 +4,7 @@ class Node(object):
         self.left = None
         self.right = None
 
+
 class BinaryTree(object):
     def __init__(self, root):
         self.root = Node(root)
@@ -13,23 +14,47 @@ class BinaryTree(object):
         is in the tree, return
         False otherwise."""
         # Your code goes here
-        pass
+        temp = self.root
+        while temp:
+            if find_val < temp.value:
+                if temp.left:
+                    temp = temp.left
+                else:
+                    return False
+            elif find_val > temp.value:
+                if temp.right:
+                    temp = temp.right
+                else:
+                    return False
+            else:
+                return True
+        return False
+
+    def traversal(self, root, nodes):
+        temp = root
+        nodes = []
+        if temp:
+            nodes.append(temp.value)
+            nodes = self.traversal(temp.left, nodes)
+            nodes = self.traversal(temp.right, nodes)
+        return nodes
 
     def print_tree(self):
         """Print out all tree nodes
         as they are visited in
         a pre-order traversal."""
         # Your code goes here
-        pass
+        for each in self.traversal(self.root):
+            print(each, end=" ")
 
-    def preorder_search(self, start, find_val):
-        """Helper method - use this to create a 
-        recursive search solution."""
-        # Your code goes here
-        pass
+    # def preorder_search(self, start, find_val):
+    #     """Helper method - use this to create a
+    #     recursive search solution."""
+    #     # Your code goes here
+    #     pass
 
-    def preorder_print(self, start, traversal):
-        """Helper method - use this to create a 
-        recursive print solution."""
-        # Your code goes here
-        pass
+    # def preorder_print(self, start, traversal):
+    #     """Helper method - use this to create a
+    #     recursive print solution."""
+    #     # Your code goes here
+    #     pass
