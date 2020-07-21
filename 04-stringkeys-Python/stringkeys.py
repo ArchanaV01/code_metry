@@ -19,7 +19,7 @@ class HashTable(object):
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter
         # Your code goes here
         hashVal = self.calculate_hash_value(string)
-        while self.table[hashVal] and hashVal < 10000:
+        while hashVal < 10000 and self.table[hashVal]:
             hashVal += 1
         if hashVal >= 10000:
             hashVal = 0
@@ -34,7 +34,7 @@ class HashTable(object):
         Return -1 otherwise."""
         # Your code goes here
         hashVal = self.calculate_hash_value(string)
-        while self.table[hashVal] != string and hashVal < 10000:
+        while hashVal < 10000 and self.table[hashVal] != string:
             hashVal += 1
         if hashVal >= 10000:
             hashVal = 0
