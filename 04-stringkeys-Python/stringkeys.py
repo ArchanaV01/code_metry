@@ -7,12 +7,18 @@ class HashTable(object):
     def __init__(self):
         self.table = [None]*10000
 
+    def calculate_hash_value(self, string):
+        """Helper function to calulate a
+        hash value from a string."""
+        # Your code goes here
+        return ord(string[0])*100 + ord(string[1])
+
     def store(self, string):
         """Input a string that's stored in 
         the table."""
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter
         # Your code goes here
-        hashVal = calculate_hash_value(string)
+        hashVal = self.calculate_hash_value(string)
         while self.table[hashVal] and hashVal < 10000:
             hashVal += 1
         if hashVal >= 10000:
@@ -27,7 +33,7 @@ class HashTable(object):
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        hashVal = calculate_hash_value(string)
+        hashVal = self.calculate_hash_value(string)
         while self.table[hashVal] != string and hashVal < 10000:
             hashVal += 1
         if hashVal >= 10000:
@@ -38,9 +44,3 @@ class HashTable(object):
             return hashVal
         else:
             return -1
-
-    def calculate_hash_value(self, string):
-        """Helper function to calulate a
-        hash value from a string."""
-        # Your code goes here
-        return ord(string[0])*100 + ord(string[1])
