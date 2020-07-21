@@ -22,10 +22,9 @@ class LinkedList(object):
     def append(self, new_element):
         # Your code goes here
         temp = self.head
-        while temp != None:
-            print(temp.value)
+        while temp.next != None:
             temp = temp.next
-        temp = Element(new_element)
+        temp.next = new_element
 
     def get_position(self, position):
         """Get an element from a particular position.
@@ -36,7 +35,6 @@ class LinkedList(object):
         temp = self.head
 
         while counter < position and temp != None:
-            print(temp.value)
             temp = temp.next
             counter += 1
         return temp
@@ -53,19 +51,24 @@ class LinkedList(object):
             counter += 1
         if counter == position - 1:
             # temp = prev of reqd position
-            newEle = Element(new_element)
-            newEle.next = temp.next.next
-            temp.next = newEle
+            new_element.next = temp.next.next
+            temp.next = new_element
 
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
         temp = self.head
-        while temp != None and temp.value != value:
-            temp = temp.next
-        if temp != None:
-            if temp.next != None:
-                temp.value = temp.next.value
-                temp.next = temp.next.next
-            else:
-                temp = None
+        if temp.value == value:
+            self.head = self.head.next
+        else:
+            while temp != None:
+                if temp.value == value:
+                    temp = temp.next
+                    break
+                temp = temp.next
+        # if temp != None:
+        #     if temp.next != None:
+        #         temp.value = temp.next.value
+        #         temp.next = temp.next.next
+        #     else:
+        #         temp = None
