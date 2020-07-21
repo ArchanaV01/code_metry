@@ -26,6 +26,7 @@ class HashTable(object):
             while self.table[hashVal]:
                 hashVal += 1
         if not self.table[hashVal]:
+            print(hashVal)
             self.table[hashVal] = string
 
     def lookup(self, string):
