@@ -6,21 +6,22 @@ import math
 
 
 def isPrime(n):
-    for i in range(2, int(math.sqrt(n))):
+    for i in range(2, int(math.sqrt(n))+1):
         if n % i == 0:
             return False
     return True
 
 
 def isAdditivePrime(n):
+    print("n:", n, end='  ')
     if not isPrime(n):
         return False
     else:
         sumDig = 0
         while n > 0:
-            sumDig += n % 10
+            sumDig += (n % 10)
             n //= 10
-        print(n, sumDig)
+        print("sum of digits:", sumDig)
         if isPrime(sumDig):
             return True
         else:
@@ -34,6 +35,8 @@ def fun_nth_additive_prime(n):
     numb = 3
     while counter < n:
         if isAdditivePrime(numb):
+            print("counter:", counter, "numb:", numb)
             counter += 1
-            numb += 2
+        numb += 2
+
     return numb
