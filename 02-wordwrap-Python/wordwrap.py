@@ -26,7 +26,7 @@ def fun_wordwrap(s, n):
         if s[-1] == " ":
             s = s[:-1]
         while s != "":
-            print(s)
+            print(s, "-----------", finalStr)
             finalStr += s[:n] + "\n"
             s = s[n:]
         finalStr.replace(" ", "-")
