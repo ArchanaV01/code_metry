@@ -21,13 +21,12 @@ def fun_wordwrap(s, n):
         return s
     else:
         finalStr = ""
-        if s[0] == " ":
-            s = s[1:]
-        if s[-1] == " ":
-            s = s[:-1]
-        while s != "":
-            print(s, "-----------", finalStr)
-            finalStr += s[:n] + "\n"
+        s = s.strip()
+        while len(s):
+            print(s + "-----------" + finalStr)
+            finalStr += s[:n]
             s = s[n:]
-        finalStr.replace(" ", "-")
+            if len(s):
+                finalStr += "\n"
+        finalStr = finalStr.replace(" ", "-")
         return finalStr
