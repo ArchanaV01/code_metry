@@ -20,17 +20,14 @@ def fun_wordwrap(s, n):
     if n == 0:
         return s
     else:
-        finalStr = """"""
+        finalStr = ""
         if s[0] == " ":
             s = s[1:]
         if s[-1] == " ":
             s = s[:-1]
         while s != "":
+            print(s)
             finalStr += s[:n] + "\n"
             s = s[n:]
-            print(s)
         finalStr.replace(" ", "-")
         return finalStr
-
-
-print(fun_wordwrap("  abcdefghij", 4))
