@@ -13,17 +13,18 @@
 
 def fun_isfactorish(n):
     if isinstance(n, int):
-        if n < 0:
-            n *= -1
+        temp = n
+        if temp < 0:
+            temp *= -1
         digitCount = 0
-        numb = n
-        while n > 0 and digitCount <= 3:
-            if numb % (n % 10) == 0:
-                n //= 10
+        while temp > 0 and digitCount < 3:
+            print(temp)
+            if n % (temp % 10) == 0:
+                temp //= 10
                 digitCount += 1
             else:
                 return False
-        if n == 0:
+        if temp == 0:
             return True
         else:
             return False
