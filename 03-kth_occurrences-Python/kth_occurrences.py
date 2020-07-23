@@ -13,14 +13,4 @@ def fun_kth_occurrences(s, n):
     print(freq)
     sortedFreq = sorted(freq.items(), key=lambda item: (
         item[1]), reverse=True)
-    freqVals = []
-    for eachVal in freq.values():
-        if eachVal not in freqVals:
-            freqVals.append(eachVal)
-    freqVals.sort()
-    print(sortedFreq)
-    if n-1 < len(freqVals):
-        for each in freq:
-            if freq[each] == freqVals[n-1]:
-                return (each)
-                # break
+    return sortedFreq[n-1][0]
