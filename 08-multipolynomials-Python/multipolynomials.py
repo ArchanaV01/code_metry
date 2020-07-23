@@ -10,10 +10,12 @@ def multipolynomials(p1, p2):
     # Your code goes here
     len1 = len(p1)
     len2 = len(p2)
-    # 4x^3 + 7x^2 + 2 => (4,7,0,2)
-    # 6x^2 + 4x + 9 => (6,4,9)
-    coeff = [0]*(len1 - 1)*(len2 - 1)
+    # 4x^3 + 7x^2 + 2 => (4,7,0,2) 4 3
+    # 6x^2 + 4x + 9 => (6,4,9) 3 2
+    coeff = [0]*((len1 - 1)+len2)
+    print((len1 - 1) + (len2 - 1))
     for i in range(len1):
         for j in range(len2):
+            print(i, j)
             coeff[i+j] += p1[i]*p2[j]
     return [a for a in coeff if a != 0]
