@@ -6,9 +6,9 @@ sys.path.append(os.getcwd())
 
 
 @pytest.mark.parametrize('m1, b1, m2, b2, check', [
-    (4, 13, 8, 17, None),
+    (4, 13, 8, 17, -1),
     (2, 13, 2, 14, None),
-    (8, 13, 4, 17, None),
+    (8, 13, 4, 17, 1),
     (4, 13, 3, 17, 4),
     (4, 27, 9, 17, 2),
 ])
