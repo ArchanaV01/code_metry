@@ -15,9 +15,11 @@ def lookandsay(a):
     length = len(a)
     while ind < length:
         element = a[ind]
-        counter = 1
-        while a[ind] == element:
+        counter = 0
+        print(element, end=" ")
+        while a[ind] == element and ind < length:
             counter += 1
             ind += 1
         ls.append((counter, element))
+        print(counter)
     return ls
