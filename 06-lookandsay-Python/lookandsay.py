@@ -17,7 +17,7 @@ def lookandsay(a):
         element = a[ind]
         counter = 0
         print(element, end=" ")
-        while a[ind] == element and ind < length:
+        while ind < length and a[ind] == element:
             counter += 1
             ind += 1
         ls.append((counter, element))
