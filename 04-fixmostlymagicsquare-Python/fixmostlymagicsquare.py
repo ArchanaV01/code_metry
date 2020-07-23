@@ -65,6 +65,7 @@ def fixmostlymagicsquare(L):
         for each in freq:
             if freq[each] > maxi:
                 maxi_coord = each
+                maxi = freq[each]
         print(maxi, maxi_coord)
         diff = sumVal2 - sumVal1
         L[maxi_coord[0]][maxi_coord[1]] -= diff
@@ -84,6 +85,6 @@ def fixmostlymagicsquare(L):
                 maxi_coord = each
                 maxi = freq[each]
         print(maxi, maxi_coord)
-        diff = sumVal1 - sumVal1
+        diff = sumVal1 - sumVal2
         L[maxi_coord[0]][maxi_coord[1]] -= diff
         return L
