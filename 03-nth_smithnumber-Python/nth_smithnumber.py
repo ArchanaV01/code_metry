@@ -33,9 +33,9 @@ def isSchmidt(n):
         # print(n)
         sum_digits = find_sum(n)
         sum_factors_digits = 0
-        for i in range(2, n):
+        for i in range(2, math.sqrt(n) + 1):
             if n % i == 0 and isPrime(i):
-                sum_factors_digits += find_sum(i)
+                sum_factors_digits += find_sum(i) + find_sum(n/i)
         print(n, sum_factors_digits)
         if sum_digits != sum_factors_digits:
             return False
