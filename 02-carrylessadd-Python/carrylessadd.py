@@ -12,15 +12,17 @@ def fun_carrylessadd(x, y):
         return x
     lo = min(x, y)
     hi = max(x, y)
-    cl_sum = 0
+    add = lo % 10 + hi % 10
+    if add >= 10:
+        add -= 10
+    lo //= 10
+    hi //= 10
+    cl_sum = add
     while hi > 0:
         add = lo % 10 + hi % 10
         if add >= 10:
             add -= 10
-        if cl_sum > 0:
-            cl_sum = add*10 + cl_sum
-        else:
-            cl_sum = add
+        cl_sum = add*10 + cl_sum
         print(lo % 10, hi % 10, add, cl_sum)
         lo //= 10
         hi //= 10
