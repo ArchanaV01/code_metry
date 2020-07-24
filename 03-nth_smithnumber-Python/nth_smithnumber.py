@@ -32,14 +32,14 @@ def isSchmidt(n):
     else:
         sum_digits = find_sum(n)
         sum_factors_digits = 0
-
+        print(n, end=' ')
         while n > 0:
             i = 2
             limit = int(math.sqrt(n))
             if n % i == 0 and isPrime(i):
                 sum_factors_digits += find_sum(i)
             n //= i
-        print(n, sum_factors_digits)
+        print(sum_factors_digits)
         if sum_digits != sum_factors_digits:
             return False
         else:
