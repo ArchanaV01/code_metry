@@ -23,12 +23,16 @@ def isKaprekar(n):
         length += 1
         digits.append(sqr % 10)
         sqr //= 10
-    # print(n, end='  ')
+    digits = digits[::-1]
+    # if digits[-1] == 0:
+    #     digits.pop(-1)
     for i in range(length):
-        sum_numb = form_numb(digits[:i]) + form_numb(digits[i:])
-        if sum_numb == n:
-            print(form_numb(digits[:i]), form_numb(digits[i:]))
-            return True
+        if form_numb(digits[i:]) != 0:
+            sum_numb = form_numb(digits[:i]) + form_numb(digits[i:])
+            if sum_numb == n:
+                print(form_numb(digits[:i]), form_numb(digits[i:]))
+                print(digits)
+                return True
     return False
 
 
