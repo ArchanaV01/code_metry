@@ -22,6 +22,7 @@ def longestdigitrun(n):
                 freq[digit] = counter
         else:
             freq[digit] = counter
+    print(freq)
     maxi = -1
     maxi_dig = 9
     for each in freq:
