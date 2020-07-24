@@ -21,6 +21,7 @@ def find_sum(n):
     while n > 0:
         val += n % 10
         n //= 10
+    return val
 
 
 def isSchmidt(n):
