@@ -22,12 +22,12 @@ def longestdigitrun(n):
                 freq[digit] = counter
         else:
             freq[digit] = counter
-    print(freq)
     maxi = -1
     maxi_dig = 9
     for each in freq:
         if freq[each] > maxi:
             maxi_dig = each
+            maxi = freq[each]
         elif freq[each] == maxi:
             if each < maxi_dig:
                 maxi_dig = each
