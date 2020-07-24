@@ -25,7 +25,7 @@ def nthwithproperty309(n):
     counter = 0
     while True:
         if iswithproperty309(numb):
-            counter += 1
             if counter == n:
                 return numb
+            counter += 1
         numb += 1
