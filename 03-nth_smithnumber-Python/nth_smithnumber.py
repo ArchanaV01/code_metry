@@ -44,7 +44,8 @@ def fun_nth_smithnumber(n):
     numb = 4
     while True:
         if isSchmidt(numb):
+            print(numb)
             counter += 1
-            if counter == n:
+            if counter > n:
                 return numb
         numb += 1
