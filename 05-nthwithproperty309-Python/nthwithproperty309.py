@@ -12,7 +12,7 @@ def iswithproperty309(n):
         if fifth_pow % 10 not in digits:
             digits[fifth_pow % 10] = True
         fifth_pow //= 10
-    print(digits)
+    print(fifth_pow, digits)
     if len(digits) == 10:
         return True
     else:
