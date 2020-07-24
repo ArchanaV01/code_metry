@@ -30,13 +30,13 @@ def isSchmidt(n):
     if isPrime(n):
         return False
     else:
-        print(n)
+        # print(n)
         sum_digits = find_sum(n)
         sum_factors_digits = 0
         for i in range(2, n):
             if n % i == 0 and isPrime(i):
                 sum_factors_digits += find_sum(i)
-        print(sum_factors_digits)
+        print(n, sum_factors_digits)
         if sum_digits != sum_factors_digits:
             return False
         else:
