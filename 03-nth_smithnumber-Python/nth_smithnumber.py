@@ -10,6 +10,8 @@ import math
 
 
 def isPrime(n):
+    if n == 2:
+        return True
     for i in range(2, int(math.sqrt(n))+1):
         if n % i == 0:
             return False
@@ -45,7 +47,7 @@ def fun_nth_smithnumber(n):
     while True:
         if isSchmidt(numb):
             print(numb)
-            counter += 1
-            if counter > n:
+            if counter >= n:
                 return numb
+            counter += 1
         numb += 1
