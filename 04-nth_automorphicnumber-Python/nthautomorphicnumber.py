@@ -10,7 +10,7 @@ def is_automorphic(n):
     while n > 0:
         counter += 1
         n //= 10
-    if (n**2) % (10**(counter-1)) == numb:
+    if (numb**2) % (10**counter) == numb:
         return True
     else:
         return False
