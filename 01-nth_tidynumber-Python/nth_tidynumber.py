@@ -16,6 +16,7 @@ def is_tidy_number(n):
             return False
         prev = digit
         n = n//10
+    return True
 
 
 def fun_nth_tidynumber(n):
