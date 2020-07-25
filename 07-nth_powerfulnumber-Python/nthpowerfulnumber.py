@@ -22,12 +22,11 @@ def is_powerful_number(n):
         # print(n, i, end='  ')
         if isPrime(i) and n % i == 0:
             if n % (i**2) == 0:
-                n //= (i**2)
+                n //= i
                 i = 2
             else:
                 return False
-        else:
-            i += 1
+        i += 1
     return True
 
 
