@@ -5,13 +5,15 @@
 
 
 def is_automorphic(n):
-    sqr = (n**2)
+    counter = 0
+    numb = n
     while n > 0:
-        if n % 10 != sqr % 10:
-            return False
+        counter += 1
         n //= 10
-        sqr //= 10
-    return True
+    if (n**2) % (10**(counter-1)) == numb:
+        return True
+    else:
+        return False
 
 
 def nthautomorphicnumbers(n):
