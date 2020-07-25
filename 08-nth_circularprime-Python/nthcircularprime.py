@@ -16,14 +16,51 @@ def isPrime(n):
     return True
 
 
+def formNumb(lis, lis2):
+    numb = 0
+    for each in lis:
+        numb = numb*10 + each
+    for each in lis2:
+        numb = numb*10 + each
+    return numb
+
+
 def circularNumbers(n):
     cir_numb = []
     numb = n
+    digits = []
     while numb > 0:
+        digits.append(numb % 10)
+        if numb % 10 == 0:
+            return None
+        numb //= 10
+    # print(n, digits, end=' ')
+    for i in range(0, len(digits)):
+        cir_numb.append(formNumb(digits[i:], digits[:i]))
+    # print(cir_numb)
+    return cir_numb
 
 
 def isCircularPrime(n):
 
+    rotated_numbs = circularNumbers(n)
+    if not rotated_numbs:
+        return False
+    else:
+        for each in rotated_numbs:
+            if not isPrime(each):
+                return False
+        return True
+
 
 def nthcircularprime(n):
     # Your code goes here
+    numb = 2
+    counter = 1
+    while True:
+        if isCircularPrime(numb):
+            print((counter, numb), end=", ")
+            if counter == n:
+                return numb
+            counter += 1
+        numb += 1
