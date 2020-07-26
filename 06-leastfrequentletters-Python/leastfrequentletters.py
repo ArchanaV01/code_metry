@@ -10,16 +10,19 @@
 
 def leastfrequentletters(s):
         # Your code goes here
+    if s == "":
+        return ""
     s = s.lower()
     chars = {}
     #  = len(s)
     minChars = []
     for each in s:
         print(minChars, chars)
-        if each in chars:
-            chars[each] += 1
-        else:
-            chars[each] = 1
+        if each >= 'a' and each <= 'z':
+            if each in chars:
+                chars[each] += 1
+            else:
+                chars[each] = 1
         # if chars[each] < min_freq:
         #     min_freq = chars[each]
         #     minChars.clear()
