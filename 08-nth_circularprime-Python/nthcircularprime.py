@@ -55,12 +55,14 @@ def isCircularPrime(n):
 
 def nthcircularprime(n):
     # Your code goes here
-    numb = 2
-    counter = 1
+    if n == 1:
+        return 2
+    numb = 3
+    counter = 2
     while True:
         if isCircularPrime(numb):
             print((counter, numb), end=", ")
             if counter == n:
                 return numb
             counter += 1
-        numb += 1
+        numb += 2
