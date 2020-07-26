@@ -12,17 +12,22 @@ def leastfrequentletters(s):
         # Your code goes here
     s = s.lower()
     chars = {}
-    min_freq = len(s)
+    #  = len(s)
     minChars = []
     for each in s:
+        print(minChars, chars)
         if each in chars:
             chars[each] += 1
         else:
             chars[each] = 1
-        if chars[each] < min_freq:
-            min_freq = chars[each]
-            minChars.clear()
-            minChars.append(chars[each])
-        elif chars[each] == min_freq:
-            minChars.append(chars[each])
+        # if chars[each] < min_freq:
+        #     min_freq = chars[each]
+        #     minChars.clear()
+        #     minChars.append(each)
+        # elif chars[each] == min_freq:
+        #     minChars.append(each)
+    min_freq = min(chars.values())
+    for each in chars:
+        if chars[each] == min_freq:
+            minChars.append(each)
     return "".join(sorted(minChars))
