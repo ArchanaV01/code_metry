@@ -21,9 +21,21 @@ def SL_helper(lis, next):
         else:
             return lis[0]
     if lis[0] < lis[next]:
-        lis[0],
+        lis[0], lis[next] = lis[next], lis[0]
+        if lis[0] < lis[1]:
+            lis[0], lis[1] = lis[1], lis[0]
+        elif lis[next] > lis[1]:
+            lis[1], lis[next] = lis[next], lis[1]
+    else:
+        if lis[next] > lis[1]:
+            lis[1], lis[next] = lis[next], lis[1]
+    return SL_helper(lis, next+1)
 
 
 def recursion_secondlargest(L):
-        # Your code goes here
-    pass
+    # Your code goes here
+    length = len(L)
+    if length < 2:
+        return None
+    else:
+        return SL_helper(L, 2)
