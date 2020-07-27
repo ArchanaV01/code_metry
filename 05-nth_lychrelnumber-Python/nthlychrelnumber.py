@@ -3,7 +3,7 @@
 # repeatedly reversing its digits and adding the resulting numbers. This process is sometimes called the
 # 196-algorithm, after the most famous number associated with the process.
 # The first few Lychrel numbers are 196, 295, 394, 493, 592, 689, 691, 788, 790, 879, 887….
-MAX_ITERATIONS = 20
+MAX_ITERATIONS = 23
 
 
 def reverse(numb):
