@@ -28,6 +28,11 @@ class hasbalancedparantheses {
             }
             i++;
         }
-        return true;
+        if (stack.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
