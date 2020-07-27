@@ -40,6 +40,7 @@
 
 
 def playstep2(hand, dice):
+    print(hand)
     hand_roll = []
     while hand > 0:
         hand_roll.append(hand % 10)
