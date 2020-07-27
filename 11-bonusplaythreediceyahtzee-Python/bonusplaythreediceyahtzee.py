@@ -40,7 +40,7 @@
 
 
 def playstep2(hand, dice):
-    print(hand)
+    print(hand, dice)
     hand_roll = []
     while hand > 0:
         hand_roll.append(hand % 10)
@@ -84,5 +84,11 @@ def findScore(hand):
 
 def bonusplaythreediceyahtzee(dice):
     hand, dice = playstep2(dice % 1000, (dice-dice % 1000)//1000)
+    # digits =  []
+    # temp = hand
+    # while temp > 0:
+    #     digits.append(temp%10)
+    #     temp //= 10
+    # if digits[0] == digits[]
     hand, dice = playstep2(hand, dice)
     return (hand, findScore(hand))
