@@ -1,5 +1,3 @@
-import sun.font.TrueTypeFont;
-
 // # Write the function longestSubpalindrome(s), that takes a string s and returns 
 // the longest palindrome that occurs as consecutive characters (not just letters, but 
 // 	any characters) in s. So:
