@@ -45,6 +45,6 @@ def sortUSA():
 def alphaAsia():
     cities = []
     for each in locations['Asia']:
-        for each1 in each:
+        for each1 in locations['Asia'][each]:
             cities.append("'" + each1 + " - " + each + "'")
     return sorted(cities)
