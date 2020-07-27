@@ -13,7 +13,7 @@ import sun.font.TrueTypeFont;
 // and longestSubpalindrome("a") is "a".
 
 class longestsubpalindromes {
-    public static boolean isPalindrome(String s) {
+    public boolean isPalindrome(String s) {
         int index = 0;
         int len = s.length();
         while (index < len / 2 + 1) {
@@ -29,7 +29,7 @@ class longestsubpalindromes {
         return true;
     }
 
-    public static String fun_longestsubpalindromes(String s) {
+    public String fun_longestsubpalindromes(String s) {
         StringBuffer sb = new StringBuffer(s);
         // System.out.println(s + " " + sb.toString());
         int len = s.length();
