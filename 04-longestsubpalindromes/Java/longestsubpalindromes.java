@@ -13,10 +13,10 @@ import sun.font.TrueTypeFont;
 // and longestSubpalindrome("a") is "a".
 
 class longestsubpalindromes {
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         int index = 0;
         int len = s.length();
-        while (index <= len / 2 + 1) {
+        while (index < len / 2 + 1) {
             if (index == len - index - 1) {
                 return true;
             }
@@ -29,17 +29,19 @@ class longestsubpalindromes {
         return true;
     }
 
-    public String fun_longestsubpalindromes(String s) {
+    public static String fun_longestsubpalindromes(String s) {
         StringBuffer sb = new StringBuffer(s);
+        // System.out.println(s + " " + sb.toString());
         int len = s.length();
         int start = 0;
         int end = len - 1;
         String longest_pal = "";
         for (int i = 0; i < len; i++) {
             for (int j = len - 1; j > i; j--) {
-                String part = sb.substring(start, end);
+                String part = sb.substring(i, j);
+                // System.out.println(i + " " + j + " " +part);
                 if (isPalindrome(part)) {
-                    System.out.println(part);
+                    // System.out.println(part);
                     if (part.length() > longest_pal.length()) {
                         longest_pal = part;
                     } else if (part.length() == longest_pal.length()) {
@@ -47,6 +49,8 @@ class longestsubpalindromes {
                             longest_pal = part;
                         }
                     }
+                } else {
+                    continue;
                 }
             }
         }
