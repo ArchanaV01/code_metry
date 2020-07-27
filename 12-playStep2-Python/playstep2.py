@@ -28,6 +28,25 @@
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
+
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+    hand_roll = []
+    while hand > 0:
+        hand_roll.append(hand % 10)
+        hand //= 10
+    if hand_roll[0] == hand_roll[1]:
+        digits = [hand_roll[0], hand_roll[1], dice % 10]
+        dice //= 10
+    elif hand_roll[2] == hand_roll[1]:
+        digits = [hand_roll[2], hand_roll[1], dice % 10]
+        dice //= 10
+    elif hand_roll[0] == hand_roll[2]:
+        digits = [hand_roll[0], hand_roll[2], dice % 10]
+        dice //= 10
+    else:
+        digits = [max(hand_roll), dice % 10, (dice % 100 - dice % 10)//10]
+        dice //= 100
+    numb = 0
+    for each in sorted(digits, reverse=True):
+        numb = numb*10 + each
+    return (numb, dice)
