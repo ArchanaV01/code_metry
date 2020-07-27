@@ -33,8 +33,6 @@ class longestsubpalindromes {
         StringBuffer sb = new StringBuffer(s);
         // System.out.println(s + " " + sb.toString());
         int len = s.length();
-        int start = 0;
-        int end = len - 1;
         String longest_pal = "";
         for (int i = 0; i < len; i++) {
             for (int j = len - 1; j > i; j--) {
